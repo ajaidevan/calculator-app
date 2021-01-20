@@ -1,0 +1,42 @@
+
+  <div class="calculator">
+  <div class="text-center">
+      <h1>Angular Calculator</h1>
+</div>
+<hr>
+<div >
+  <div type="text" class="type-field">{{input}}</div>
+</div>
+<hr>
+<br>
+  <div type="text" class="calculator-screen">{{result ? result :0}}</div>
+
+  <div class="calculator-keys">
+
+    <button type="button" class="clear-btn" id="ac" value="all-clear"(click)="allClear()">AC</button>
+    <button type="button" class="clear-btn" id="delete" value="delete" (click)="clear()">DELETE</button>
+    <button type="button" class="operator" id="subtract" value="subtract" (click)="pressOperator('-')">-</button>
+    <button type="button" class="operator" id="divide" value="divide" (click)="pressOperator('/')">/</button>
+
+    <button type="button" id="7" value="7" (click)="pressNum('7')">7</button>
+    <button type="button" id="8" value="8" (click)="pressNum('8')">8</button>
+    <button type="button" id="9" value="9" (click)="pressNum('9')">9</button>
+
+    <button type="button" class="operator" id="multiply" value="multiply"(click)="pressOperator('*')">*</button>
+    <button type="button" id="4" value="4" (click)="pressNum('4')">4</button>
+    <button type="button" id="5" value="5" (click)="pressNum('5')">5</button>
+
+    <button type="button"id="6" value="6" (click)="pressNum('6')">6</button>
+    <button type="button" class="operator" id="add" value="add" (click)="pressOperator('+')">+</button>
+    <button type="button" id="2" value="2"(click)="pressNum('2')">2</button>
+    <button type="button" id="2" value="3" (click)="pressNum('3')">3</button>
+
+    <button type="button" id="1" value="1" (click)="pressNum('1')">1</button>
+    <button type="button"  class="operator" id="percentile" value="percentile" (click)="pressOperator('%')">%</button>
+    <button type="button"id="0" value="0" (click)="pressNum('0')">0</button>
+    <button type="button" class="decimal" id="dot" value="."(click)="pressNum('.')" pattern="( /\.{2,}/g, '.' )" >.</button>
+
+    <button type="button" class="equal-sign" id="equals" value="=" (click)="getAnswer()">=</button>
+
+  </div>
+</div>
