@@ -24,12 +24,10 @@ export class CalculatorComponent implements OnInit {
  
   getLastOperand() {
     let pos:number;
-    console.log(this.input)
     pos=this.input.toString().lastIndexOf("+")
     if (this.input.toString().lastIndexOf("-") > pos) pos=this.input.lastIndexOf("-")
     if (this.input.toString().lastIndexOf("*") > pos) pos=this.input.lastIndexOf("*")
     if (this.input.toString().lastIndexOf("/") > pos) pos=this.input.lastIndexOf("/")
-    console.log('Last '+this.input.substr(pos+1))
     return this.input.substr(pos+1)
   }
  
